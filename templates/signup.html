@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,900" rel="stylesheet">
+    <link href="../static/css/normalize.css" rel="stylesheet">
+    <link href="../static/css/styles.css" rel="stylesheet">
+        <link href="http://fonts.googleapis.com/earlyaccess/jejugothic.css" rel="stylesheet">
+        <link href="http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css" rel="stylesheet">
+    <style>
+        .jg{font-family: 'Jeju Gothic', sans-serif;}
+        .nb{font-family: 'Nanum Brush Script', cursive;}
+    </style>
+    <title>Online Registration Form</title>
+</head>
+<body>
+    <header>
+        <h1 class="jg">&nbsp;&nbsp;&nbsp;&nbsp;날씨기반 음악추천 시스템</h1>
+    </header>
+
+    <form action="/update" method="POST">
+        <div class="banner">
+            <h2 class="signUpHeader"><p  class="jg"><font color="black"><font class="nb" size="6">☼ 오늘날씨, 어떤가요</font> 멤버십</font></p></h2>
+            <p class="jg">멤버는 조금 더 커스터마이즈 된 음악을 추천 받으실 수 있습니다.</p>
+        </div>
+
+        <hr class="line1">
+        <hr class="line2">
+
+        <fieldset class="container_1">
+            <legend class="jg"># 기본정보</legend>
+            <label for="id_" class = 'jg'>아이디</label>
+            <input type="text" name="id_" id="id_" class = 'jg' placeholder="필수" required>
+            <label for="pwd_" class = 'jg'>비밀번호</label>
+            <input type="text" name="pwd_" id="pwd_" class = 'jg' placeholder="필수"required>
+
+            <label for="age" class = 'jg'>연령대</label>
+            <select name="age" id="age" >
+                <option value="choose"class="jg">선택</option>
+                <option value="10"class="jg">10</option>
+                <option value="20"class="jg">20</option>
+                <option value="30"class="jg">30</option>
+                <option value="40"class="jg">40</option>
+                <option value="50"class="jg">50</option>
+            </select>
+            <br>
+            <label for="gender" class="jg">성별</label>
+            <select name="gender" id="gender" >
+                <option value="choose"class="jg">선택</option>
+                <option value="남자"class="jg">남자</option>
+                <option value="여자"class="jg">여자</option>
+            </select>
+        </fieldset>
+
+        <hr class="line3">
+
+        <fieldset class="container_2">
+            <div>
+                <h2 class="jg"># 선호하는 장르</h2>
+                <label class="jg">:: 좋아하는 음악 장르를 최대 3개까지 선택하세요 ::</label><br>
+                <input type="checkbox" id="jazz" value="재즈" name="jazz"><label for="jazz" class="jg">재즈</label><br>
+                <input type="checkbox" id="rock" value="락" name="rock"><label for="rock" class="jg">락</label><br>
+                <input type="checkbox" id="hiphop" value="힙합" name="hiphop"><label for="hiphop" class="jg">힙합/랩</label><br>
+                <input type="checkbox" id="ballad" value="발라드" name="ballad"><label for="ballad" class="jg">발라드</label><br>
+                <input type="checkbox" id="dance" value="댄스" name="dance"><label for="dance" class="jg">댄스</label><br>
+                <input type="checkbox" id="others" value="기타" name="others"><label for="others" class="jg">기타</label><br>
+                <br>
+            </div>
+        </fieldset>
+
+        <button type="submit" class="jg">등록하기</button>
+    </form>
+
+    <footer>
+        <p class="jg">SK인포섹 모듈 프로젝트 B</p>
+    </footer>
+</body>
+</html>
